@@ -21,9 +21,11 @@ def register_location_tools(mcp, config):
     ##########################
 
     @mcp.tool(
+        title="Locations List",
         tags={"librenms", "locations", "read-only", "global-read"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -69,9 +71,11 @@ def register_location_tools(mcp, config):
             return error_body(str(e))
 
     @mcp.tool(
+        title="Location Add",
         tags={"librenms", "locations", "admin"},
         annotations={
             "readOnlyHint": False,
+            "openWorldHint": True,
             "destructiveHint": True,
             "idempotentHint": False,
         },
@@ -109,9 +113,11 @@ def register_location_tools(mcp, config):
             return error_body(str(e))
 
     @mcp.tool(
+        title="Location Delete",
         tags={"librenms", "locations", "admin"},
         annotations={
             "readOnlyHint": False,
+            "openWorldHint": True,
             "destructiveHint": True,
             "idempotentHint": True,
         },
@@ -143,9 +149,11 @@ def register_location_tools(mcp, config):
             return error_body(str(e))
 
     @mcp.tool(
+        title="Location Edit",
         tags={"librenms", "locations", "admin"},
         annotations={
             "readOnlyHint": False,
+            "openWorldHint": True,
             "destructiveHint": True,
             "idempotentHint": True,
         },
@@ -188,9 +196,11 @@ def register_location_tools(mcp, config):
             return error_body(str(e))
 
     @mcp.tool(
+        title="Location Get",
         tags={"librenms", "locations", "read-only", "global-read"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -224,9 +234,11 @@ def register_location_tools(mcp, config):
     ##########################
 
     @mcp.tool(
+        title="Location Set Maintenance",
         tags={"librenms", "locations", "admin"},
         annotations={
             "readOnlyHint": False,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },

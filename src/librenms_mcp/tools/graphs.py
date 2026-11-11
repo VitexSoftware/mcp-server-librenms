@@ -133,9 +133,11 @@ def register_graph_tools(mcp, config):
     ##########################
 
     @mcp.tool(
+        title="Device Graphs List",
         tags={"librenms", "graphs", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -173,9 +175,11 @@ def register_graph_tools(mcp, config):
             return error_body(str(e))
 
     @mcp.tool(
+        title="Device Graph",
         tags={"librenms", "graphs", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -231,9 +235,11 @@ def register_graph_tools(mcp, config):
             ) from e
 
     @mcp.tool(
+        title="Port Graph",
         tags={"librenms", "graphs", "ports", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -323,9 +329,11 @@ def register_graph_tools(mcp, config):
             ) from e
 
     @mcp.tool(
+        title="Port Group Graph",
         tags={"librenms", "graphs", "ports", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },

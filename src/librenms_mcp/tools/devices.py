@@ -26,9 +26,11 @@ def register_device_tools(mcp, config):
     ##########################
 
     @mcp.tool(
+        title="Devices List",
         tags={"librenms", "devices", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -91,9 +93,11 @@ Valid type values: all, active, ignored, up, down, disabled, os, mac, ipv4, ipv6
             return error_body(str(e))
 
     @mcp.tool(
+        title="Device Add",
         tags={"librenms", "devices", "admin"},
         annotations={
             "readOnlyHint": False,
+            "openWorldHint": True,
             "destructiveHint": True,
             "idempotentHint": False,
         },
@@ -141,9 +145,11 @@ Valid type values: all, active, ignored, up, down, disabled, os, mac, ipv4, ipv6
             return error_body(str(e))
 
     @mcp.tool(
+        title="Device Get",
         tags={"librenms", "devices", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -172,9 +178,11 @@ Valid type values: all, active, ignored, up, down, disabled, os, mac, ipv4, ipv6
             return error_body(str(e))
 
     @mcp.tool(
+        title="Device Delete",
         tags={"librenms", "devices", "admin"},
         annotations={
             "readOnlyHint": False,
+            "openWorldHint": True,
             "destructiveHint": True,
             "idempotentHint": True,
         },
@@ -203,9 +211,11 @@ Valid type values: all, active, ignored, up, down, disabled, os, mac, ipv4, ipv6
             return error_body(str(e))
 
     @mcp.tool(
+        title="Device Update",
         tags={"librenms", "devices", "admin"},
         annotations={
             "readOnlyHint": False,
+            "openWorldHint": True,
             "destructiveHint": True,
             "idempotentHint": True,
         },
@@ -260,9 +270,11 @@ Valid type values: all, active, ignored, up, down, disabled, os, mac, ipv4, ipv6
             return error_body(str(e))
 
     @mcp.tool(
+        title="Device Ports",
         tags={"librenms", "devices", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -330,9 +342,11 @@ Valid type values: all, active, ignored, up, down, disabled, os, mac, ipv4, ipv6
             return error_body(str(e))
 
     @mcp.tool(
+        title="Device Ports Get",
         tags={"librenms", "devices", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -408,9 +422,11 @@ Valid type values: all, active, ignored, up, down, disabled, os, mac, ipv4, ipv6
             return error_body(str(e))
 
     @mcp.tool(
+        title="Device Availability",
         tags={"librenms", "devices", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -441,9 +457,11 @@ Valid type values: all, active, ignored, up, down, disabled, os, mac, ipv4, ipv6
             return error_body(str(e))
 
     @mcp.tool(
+        title="Device Outages",
         tags={"librenms", "devices", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -496,9 +514,11 @@ Valid type values: all, active, ignored, up, down, disabled, os, mac, ipv4, ipv6
             return error_body(str(e))
 
     @mcp.tool(
+        title="Device Set Maintenance",
         tags={"librenms", "devices", "admin"},
         annotations={
             "readOnlyHint": False,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -544,9 +564,11 @@ Valid type values: all, active, ignored, up, down, disabled, os, mac, ipv4, ipv6
     ##########################
 
     @mcp.tool(
+        title="Devicegroups List",
         tags={"librenms", "device-groups", "read-only", "global-read"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -588,9 +610,11 @@ Valid type values: all, active, ignored, up, down, disabled, os, mac, ipv4, ipv6
             return error_body(str(e))
 
     @mcp.tool(
+        title="Devicegroup Add",
         tags={"librenms", "device-groups", "admin"},
         annotations={
             "readOnlyHint": False,
+            "openWorldHint": True,
             "destructiveHint": True,
             "idempotentHint": False,
         },
@@ -635,9 +659,11 @@ Example dynamic group:
             return error_body(str(e))
 
     @mcp.tool(
+        title="Devicegroup Update",
         tags={"librenms", "device-groups", "admin"},
         annotations={
             "readOnlyHint": False,
+            "openWorldHint": True,
             "destructiveHint": True,
             "idempotentHint": True,
         },
@@ -683,9 +709,11 @@ Example dynamic group:
             return error_body(str(e))
 
     @mcp.tool(
+        title="Devicegroup Delete",
         tags={"librenms", "device-groups", "admin"},
         annotations={
             "readOnlyHint": False,
+            "openWorldHint": True,
             "destructiveHint": True,
             "idempotentHint": True,
         },
@@ -715,9 +743,11 @@ Example dynamic group:
             return error_body(str(e))
 
     @mcp.tool(
+        title="Devicegroup Devices",
         tags={"librenms", "device-groups", "read-only", "global-read"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -782,9 +812,11 @@ Example dynamic group:
             return error_body(str(e))
 
     @mcp.tool(
+        title="Devicegroup Set Maintenance",
         tags={"librenms", "device-groups", "admin"},
         annotations={
             "readOnlyHint": False,
+            "openWorldHint": True,
             "destructiveHint": True,
             "idempotentHint": True,
         },
@@ -830,9 +862,11 @@ Example dynamic group:
             return error_body(str(e))
 
     @mcp.tool(
+        title="Devicegroup Add Devices",
         tags={"librenms", "device-groups", "admin"},
         annotations={
             "readOnlyHint": False,
+            "openWorldHint": True,
             "destructiveHint": True,
             "idempotentHint": False,
         },
@@ -874,9 +908,11 @@ Example dynamic group:
             return error_body(str(e))
 
     @mcp.tool(
+        title="Devicegroup Remove Devices",
         tags={"librenms", "device-groups", "admin"},
         annotations={
             "readOnlyHint": False,
+            "openWorldHint": True,
             "destructiveHint": True,
             "idempotentHint": False,
         },
@@ -922,9 +958,11 @@ Example dynamic group:
     ##########################
 
     @mcp.tool(
+        title="Device Discover",
         tags={"librenms", "devices"},
         annotations={
             "readOnlyHint": False,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": False,
         },
@@ -953,9 +991,11 @@ Example dynamic group:
             return error_body(str(e))
 
     @mcp.tool(
+        title="Device Rename",
         tags={"librenms", "devices", "admin"},
         annotations={
             "readOnlyHint": False,
+            "openWorldHint": True,
             "destructiveHint": True,
             "idempotentHint": True,
         },
@@ -986,9 +1026,11 @@ Example dynamic group:
             return error_body(str(e))
 
     @mcp.tool(
+        title="Device Maintenance Status",
         tags={"librenms", "devices", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -1017,9 +1059,11 @@ Example dynamic group:
             return error_body(str(e))
 
     @mcp.tool(
+        title="Device Vlans",
         tags={"librenms", "devices", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -1067,9 +1111,11 @@ Example dynamic group:
             return error_body(str(e))
 
     @mcp.tool(
+        title="Device Links",
         tags={"librenms", "devices", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -1120,9 +1166,11 @@ Example dynamic group:
             return error_body(str(e))
 
     @mcp.tool(
+        title="Device Eventlog Add",
         tags={"librenms", "devices"},
         annotations={
             "readOnlyHint": False,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": False,
         },
@@ -1161,9 +1209,11 @@ Example dynamic group:
             return error_body(str(e))
 
     @mcp.tool(
+        title="Device Fdb",
         tags={"librenms", "devices", "fdb", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -1210,9 +1260,11 @@ Example dynamic group:
             return error_body(str(e))
 
     @mcp.tool(
+        title="Device Nac",
         tags={"librenms", "devices", "nac", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -1259,9 +1311,11 @@ Example dynamic group:
             return error_body(str(e))
 
     @mcp.tool(
+        title="Device Wireless Sensors",
         tags={"librenms", "devices", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -1314,9 +1368,11 @@ Example dynamic group:
             return error_body(str(e))
 
     @mcp.tool(
+        title="Device Parents Set",
         tags={"librenms", "devices", "admin"},
         annotations={
             "readOnlyHint": False,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -1359,9 +1415,11 @@ Example dynamic group:
             return error_body(str(e))
 
     @mcp.tool(
+        title="Device Parents Clear",
         tags={"librenms", "devices", "admin"},
         annotations={
             "readOnlyHint": False,
+            "openWorldHint": True,
             "destructiveHint": True,
             "idempotentHint": True,
         },

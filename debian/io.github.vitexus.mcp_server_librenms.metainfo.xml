@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="console-application">
+  <id>io.github.vitexus.mcp_server_librenms</id>
+  <metadata_license>FSFAP</metadata_license>
+  <project_license>MIT</project_license>
+  <name>LibreNMS MCP Server</name>
+  <summary>Query LibreNMS from an MCP client</summary>
+  <description>
+    <p>
+      Model Context Protocol server for LibreNMS network monitoring: devices,
+      ports, alerts, inventory, locations, services, logs, graphs, billing and
+      Oxidized configs. Supports a read-only mode. Fork of mhajder/librenms-mcp.
+    </p>
+  </description>
+  <provides>
+    <binary>mcp-server-librenms</binary>
+  </provides>
+  <url type="homepage">https://github.com/VitexSoftware/mcp-server-librenms</url>
+  <developer id="cz.vitexsoftware">
+    <name>Vítězslav Dvořák</name>
+  </developer>
+  <releases>
+    <release version="1.13.0" date="2026-11-11"/>
+  </releases>
+</component>

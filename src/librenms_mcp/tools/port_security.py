@@ -20,9 +20,11 @@ def register_port_security_tools(mcp, config):
     ##########################
 
     @mcp.tool(
+        title="Port Security List",
         tags={"librenms", "ports", "port-security", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -67,9 +69,11 @@ def register_port_security_tools(mcp, config):
             return error_body(str(e))
 
     @mcp.tool(
+        title="Port Security Device",
         tags={"librenms", "ports", "port-security", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -118,9 +122,11 @@ def register_port_security_tools(mcp, config):
             return error_body(str(e))
 
     @mcp.tool(
+        title="Port Security Port",
         tags={"librenms", "ports", "port-security", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },

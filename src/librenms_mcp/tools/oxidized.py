@@ -21,9 +21,11 @@ def register_oxidized_tools(mcp, config):
     ##########################
 
     @mcp.tool(
+        title="Oxidized List",
         tags={"librenms", "oxidized", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -93,9 +95,11 @@ def register_oxidized_tools(mcp, config):
             return error_body(str(e))
 
     @mcp.tool(
+        title="Oxidized Config Get",
         tags={"librenms", "oxidized", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -127,9 +131,11 @@ def register_oxidized_tools(mcp, config):
             return error_body(str(e))
 
     @mcp.tool(
+        title="Oxidized Config Search",
         tags={"librenms", "oxidized", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },

@@ -1,0 +1,11 @@
+mcp-server-librenms (1.13.0-1) unstable; urgency=medium
+
+  * Initial Debian package; fork of mhajder/librenms-mcp 1.13.0 (upstream
+    base: tag v1.13.0, synced 2026-11-11, no open advisories checked).
+  * Add title and openWorldHint to all 113 tools; port_group_remove marked
+    destructive.
+  * Add mcp-server-librenms console script with --version/--help; keep
+    librenms-mcp as compatibility symlink.
+  * Add mcprack companion package (READ_ONLY_MODE=true by default).
+
+ -- Vítězslav Dvořák <info@vitexsoftware.cz>  Wed, 11 Nov 2026 14:00:00 +0100

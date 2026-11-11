@@ -30,9 +30,11 @@ def register_network_tools(mcp, config):
     ##########################
 
     @mcp.tool(
+        title="Arp Search",
         tags={"librenms", "arp", "read-only", "global-read"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -133,9 +135,11 @@ def register_network_tools(mcp, config):
     ##########################
 
     @mcp.tool(
+        title="Bgp Sessions",
         tags={"librenms", "routing", "read-only", "global-read"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -246,9 +250,11 @@ def register_network_tools(mcp, config):
             return error_body(str(e))
 
     @mcp.tool(
+        title="Bgp Session Get",
         tags={"librenms", "routing", "read-only", "global-read"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -276,9 +282,11 @@ def register_network_tools(mcp, config):
             return error_body(str(e))
 
     @mcp.tool(
+        title="Bgp Session Edit",
         tags={"librenms", "routing", "admin"},
         annotations={
             "readOnlyHint": False,
+            "openWorldHint": True,
             "destructiveHint": True,
             "idempotentHint": True,
         },
@@ -314,9 +322,11 @@ def register_network_tools(mcp, config):
             return error_body(str(e))
 
     @mcp.tool(
+        title="Routing IP Addresses",
         tags={"librenms", "routing", "read-only", "global-read"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -362,9 +372,11 @@ def register_network_tools(mcp, config):
     ##########################
 
     @mcp.tool(
+        title="Switching Vlans",
         tags={"librenms", "switching", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -406,9 +418,11 @@ def register_network_tools(mcp, config):
             return error_body(str(e))
 
     @mcp.tool(
+        title="Switching Links",
         tags={"librenms", "switching", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -454,9 +468,11 @@ def register_network_tools(mcp, config):
     ##########################
 
     @mcp.tool(
+        title="Fdb Lookup",
         tags={"librenms", "fdb", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -494,9 +510,11 @@ def register_network_tools(mcp, config):
     ##########################
 
     @mcp.tool(
+        title="Ospf List",
         tags={"librenms", "routing", "ospf", "read-only", "global-read"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -538,9 +556,11 @@ def register_network_tools(mcp, config):
             return error_body(str(e))
 
     @mcp.tool(
+        title="Ospf Ports",
         tags={"librenms", "routing", "ospf", "read-only", "global-read"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -586,9 +606,11 @@ def register_network_tools(mcp, config):
     ##########################
 
     @mcp.tool(
+        title="Vrf List",
         tags={"librenms", "routing", "vrf", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -630,9 +652,11 @@ def register_network_tools(mcp, config):
             return error_body(str(e))
 
     @mcp.tool(
+        title="Nac List",
         tags={"librenms", "network", "nac", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },

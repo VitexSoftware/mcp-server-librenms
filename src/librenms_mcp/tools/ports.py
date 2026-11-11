@@ -27,9 +27,11 @@ def register_port_tools(mcp, config):
     ##########################
 
     @mcp.tool(
+        title="Ports List",
         tags={"librenms", "ports", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -104,9 +106,11 @@ Available columns: port_id, device_id, ifDescr, ifName, ifAlias, ifType, ifSpeed
             return error_body(str(e))
 
     @mcp.tool(
+        title="Ports Search",
         tags={"librenms", "ports", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -170,9 +174,11 @@ Available columns: port_id, device_id, ifDescr, ifName, ifAlias, ifType, ifSpeed
             return error_body(str(e))
 
     @mcp.tool(
+        title="Ports Search Field",
         tags={"librenms", "ports", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -240,9 +246,11 @@ Available columns: port_id, device_id, ifDescr, ifName, ifAlias, ifType, ifSpeed
             return error_body(str(e))
 
     @mcp.tool(
+        title="Ports Search Mac",
         tags={"librenms", "ports", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -301,9 +309,11 @@ Available columns: port_id, device_id, ifDescr, ifName, ifAlias, ifType, ifSpeed
             return error_body(str(e))
 
     @mcp.tool(
+        title="Port Get",
         tags={"librenms", "ports", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -333,9 +343,11 @@ Available columns: port_id, device_id, ifDescr, ifName, ifAlias, ifType, ifSpeed
             return error_body(str(e))
 
     @mcp.tool(
+        title="Port IP Info",
         tags={"librenms", "ports", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -361,9 +373,11 @@ Available columns: port_id, device_id, ifDescr, ifName, ifAlias, ifType, ifSpeed
             return error_body(str(e))
 
     @mcp.tool(
+        title="Port Transceiver",
         tags={"librenms", "ports", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -391,9 +405,11 @@ Available columns: port_id, device_id, ifDescr, ifName, ifAlias, ifType, ifSpeed
             return error_body(str(e))
 
     @mcp.tool(
+        title="Port Description Get",
         tags={"librenms", "ports", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -421,9 +437,11 @@ Available columns: port_id, device_id, ifDescr, ifName, ifAlias, ifType, ifSpeed
             return error_body(str(e))
 
     @mcp.tool(
+        title="Port Description Update",
         tags={"librenms", "ports"},
         annotations={
             "readOnlyHint": False,
+            "openWorldHint": True,
             "destructiveHint": True,
             "idempotentHint": True,
         },
@@ -463,9 +481,11 @@ Available columns: port_id, device_id, ifDescr, ifName, ifAlias, ifType, ifSpeed
     ##########################
 
     @mcp.tool(
+        title="Port Groups List",
         tags={"librenms", "port-groups", "read-only", "global-read"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -507,9 +527,11 @@ Available columns: port_id, device_id, ifDescr, ifName, ifAlias, ifType, ifSpeed
             return error_body(str(e))
 
     @mcp.tool(
+        title="Port Group Add",
         tags={"librenms", "port-groups", "admin"},
         annotations={
             "readOnlyHint": False,
+            "openWorldHint": True,
             "destructiveHint": True,
             "idempotentHint": False,
         },
@@ -545,9 +567,11 @@ Available columns: port_id, device_id, ifDescr, ifName, ifAlias, ifType, ifSpeed
             return error_body(str(e))
 
     @mcp.tool(
+        title="Port Group List Ports",
         tags={"librenms", "port-groups", "read-only", "global-read"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -596,9 +620,11 @@ Available columns: port_id, device_id, ifDescr, ifName, ifAlias, ifType, ifSpeed
             return error_body(str(e))
 
     @mcp.tool(
+        title="Port Group Assign",
         tags={"librenms", "port-groups", "admin"},
         annotations={
             "readOnlyHint": False,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": False,
         },
@@ -634,11 +660,13 @@ Available columns: port_id, device_id, ifDescr, ifName, ifAlias, ifType, ifSpeed
             return error_body(str(e))
 
     @mcp.tool(
+        title="Port Group Remove",
         tags={"librenms", "port-groups", "admin"},
         annotations={
             "readOnlyHint": False,
-            "destructiveHint": False,
-            "idempotentHint": False,
+            "openWorldHint": True,
+            "destructiveHint": True,
+            "idempotentHint": True,
         },
     )
     async def port_group_remove(
@@ -672,9 +700,11 @@ Available columns: port_id, device_id, ifDescr, ifName, ifAlias, ifType, ifSpeed
             return error_body(str(e))
 
     @mcp.tool(
+        title="Port Fdb",
         tags={"librenms", "ports", "fdb", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },

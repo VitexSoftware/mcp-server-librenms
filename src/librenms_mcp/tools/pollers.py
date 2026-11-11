@@ -22,9 +22,11 @@ def register_poller_tools(mcp, config):
     ##########################
 
     @mcp.tool(
+        title="Poller Group Get",
         tags={"librenms", "poller-groups", "read-only", "global-read"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },

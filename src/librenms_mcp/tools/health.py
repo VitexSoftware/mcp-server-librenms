@@ -22,9 +22,11 @@ def register_health_tools(mcp, config):
     ##########################
 
     @mcp.tool(
+        title="Health List",
         tags={"librenms", "health", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -77,9 +79,11 @@ def register_health_tools(mcp, config):
             return error_body(str(e))
 
     @mcp.tool(
+        title="Health By Type",
         tags={"librenms", "health", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -137,9 +141,11 @@ def register_health_tools(mcp, config):
             return error_body(str(e))
 
     @mcp.tool(
+        title="Health Sensor Get",
         tags={"librenms", "health", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -226,9 +232,11 @@ def register_health_tools(mcp, config):
             return error_body(str(e))
 
     @mcp.tool(
+        title="Sensors List",
         tags={"librenms", "sensors", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },

@@ -1,0 +1,9 @@
+{
+  "identifier": "mcp-server-librenms",
+  "name": "LibreNMS MCP Server",
+  "description": "stdio MCP server for LibreNMS network monitoring (113 tools, read-only mode)",
+  "category": "monitoring",
+  "prompts": [],
+  "homepage": "https://github.com/VitexSoftware/mcp-server-librenms",
+  "author": "Vítězslav Dvořák <info@vitexsoftware.cz>"
+}

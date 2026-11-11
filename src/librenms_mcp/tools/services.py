@@ -39,9 +39,11 @@ def register_service_tools(mcp, config):
     ##########################
 
     @mcp.tool(
+        title="Services List",
         tags={"librenms", "services", "read-only", "global-read"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -109,9 +111,11 @@ def register_service_tools(mcp, config):
             return error_body(str(e))
 
     @mcp.tool(
+        title="Services For Device",
         tags={"librenms", "services", "read-only", "global-read"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -187,9 +191,11 @@ def register_service_tools(mcp, config):
             return error_body(str(e))
 
     @mcp.tool(
+        title="Service Add",
         tags={"librenms", "services", "admin"},
         annotations={
             "readOnlyHint": False,
+            "openWorldHint": True,
             "destructiveHint": True,
             "idempotentHint": False,
         },
@@ -243,9 +249,11 @@ Example: {"type": "http", "desc": "Web Server", "param": "-p 8080 -u /health"}""
             return error_body(str(e))
 
     @mcp.tool(
+        title="Service Edit",
         tags={"librenms", "services", "admin"},
         annotations={
             "readOnlyHint": False,
+            "openWorldHint": True,
             "destructiveHint": True,
             "idempotentHint": True,
         },
@@ -286,9 +294,11 @@ Example: {"type": "http", "desc": "Web Server", "param": "-p 8080 -u /health"}""
             return error_body(str(e))
 
     @mcp.tool(
+        title="Service Delete",
         tags={"librenms", "services", "admin"},
         annotations={
             "readOnlyHint": False,
+            "openWorldHint": True,
             "destructiveHint": True,
             "idempotentHint": True,
         },

@@ -1,3 +1,28 @@
+# mcp-server-librenms (VitexSoftware fork)
+
+Fork of [mhajder/librenms-mcp](https://github.com/mhajder/librenms-mcp) **1.13.0** (upstream base synced 2026-11-11), packaged for Debian and mcprack.
+Differences: all 113 tools carry a `title` and the four explicit annotation hints (`openWorldHint` added; `port_group_remove` marked destructive); `mcp-server-librenms` console script with `--version/--help` (`librenms-mcp` kept as a compatibility symlink); Debian packages `mcp-server-librenms` + `mcprack-mcp-server-librenms`.
+
+## Install
+
+```sh
+apt install mcp-server-librenms mcprack-mcp-server-librenms
+```
+
+## Environment
+
+| Variable | Secret | Required | Notes |
+|---|---|---|---|
+| `LIBRENMS_URL` | no | yes | LibreNMS base URL |
+| `LIBRENMS_TOKEN` | yes | yes | API token (set via mcprack secret store) |
+| `LIBRENMS_VERIFY_SSL`, `LIBRENMS_TIMEOUT` | no | no | TLS verification, request timeout |
+| `READ_ONLY_MODE` | no | no | `true` exposes only `read-only` tagged tools (set by the companion package) |
+| `DISABLED_TAGS`, `MCP_TRANSPORT` (stdio default), `RATE_LIMIT_*`, `TOOL_SEARCH_*`, `RESOLVE_SHORT_HOSTNAMES`, `REDACT_SNMP_CREDENTIALS`, `LOG_LEVEL` | no | no | see `debian/server.json` |
+
+Tool annotation classes are defined per tool in `src/librenms_mcp/tools/*.py`; `tests/test_standards.py` enforces them.
+
+---
+
 <div align="center">
 
 # LibreNMS MCP Server

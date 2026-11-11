@@ -1,0 +1,33 @@
+Source: mcp-server-librenms
+Section: python
+Priority: optional
+Maintainer: "Vítězslav Dvořák" <info@vitexsoftware.cz>
+Build-Depends: debhelper-compat (= 13), dh-python, pybuild-plugin-pyproject, python3-all, python3-hatchling
+Standards-Version: 4.6.2
+Homepage: https://github.com/VitexSoftware/mcp-server-librenms
+Vcs-Git: https://github.com/VitexSoftware/mcp-server-librenms.git
+Vcs-Browser: https://github.com/VitexSoftware/mcp-server-librenms
+
+Package: mcp-server-librenms
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends},
+ python3-fastmcp (>= 4.1.4),
+ python3-httpx2,
+ python3-pydantic,
+ python3-dotenv,
+Provides: librenms-mcp
+Description: stdio MCP server for LibreNMS network monitoring
+ Model Context Protocol (MCP) server for LibreNMS: devices, ports, alerts,
+ inventory, locations, services, logs, graphs, billing and Oxidized configs
+ (113 tools). Set READ_ONLY_MODE=true to expose only read-only tools.
+ Fork of mhajder/librenms-mcp.
+
+Package: mcprack-mcp-server-librenms
+Architecture: all
+Depends: ${misc:Depends},
+ mcprack (>= 1.6.0),
+ mcp-server-librenms (= ${binary:Version}),
+Description: Registers LibreNMS MCP server into mcprack catalog
+ Companion package for mcp-server-librenms. Installing it registers
+ the mcp-server-librenms binary as an available MCP server in the
+ local mcprack instance; removing it unregisters it again.

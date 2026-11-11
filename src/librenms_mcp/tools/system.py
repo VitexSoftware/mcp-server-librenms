@@ -15,9 +15,11 @@ def register_system_tools(mcp, config):
     ##########################
 
     @mcp.tool(
+        title="System Info",
         tags={"librenms", "system", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -40,9 +42,11 @@ def register_system_tools(mcp, config):
             return error_body(str(e))
 
     @mcp.tool(
+        title="Ping",
         tags={"librenms", "system", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },

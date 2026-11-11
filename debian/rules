@@ -1,0 +1,13 @@
+#!/usr/bin/make -f
+
+export PYBUILD_NAME=librenms_mcp
+
+%:
+	dh $@ --with python3 --buildsystem=pybuild
+
+override_dh_auto_install:
+	dh_auto_install --destdir=debian/mcp-server-librenms
+	dh_link usr/bin/mcp-server-librenms usr/bin/librenms-mcp
+
+override_dh_auto_test:
+	# Run post-install via debian/tests/control (autopkgtest).

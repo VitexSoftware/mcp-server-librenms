@@ -43,9 +43,11 @@ def register_bill_tools(mcp, config):
     ##########################
 
     @mcp.tool(
+        title="Bills List",
         tags={"librenms", "bills", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -115,9 +117,11 @@ def register_bill_tools(mcp, config):
             return error_body(str(e))
 
     @mcp.tool(
+        title="Bill Get",
         tags={"librenms", "bills", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -170,9 +174,11 @@ def register_bill_tools(mcp, config):
             return error_body(str(e))
 
     @mcp.tool(
+        title="Bill Graph",
         tags={"librenms", "bills", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -216,9 +222,11 @@ def register_bill_tools(mcp, config):
             ) from e
 
     @mcp.tool(
+        title="Bill Graph Data",
         tags={"librenms", "bills", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -249,9 +257,11 @@ def register_bill_tools(mcp, config):
             return error_body(str(e))
 
     @mcp.tool(
+        title="Bill History",
         tags={"librenms", "bills", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -299,9 +309,11 @@ def register_bill_tools(mcp, config):
             return error_body(str(e))
 
     @mcp.tool(
+        title="Bill History Graph",
         tags={"librenms", "bills", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -351,9 +363,11 @@ def register_bill_tools(mcp, config):
             ) from e
 
     @mcp.tool(
+        title="Bill History Graph Data",
         tags={"librenms", "bills", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -388,9 +402,11 @@ def register_bill_tools(mcp, config):
             return error_body(str(e))
 
     @mcp.tool(
+        title="Bill Create Or Update",
         tags={"librenms", "bills", "admin"},
         annotations={
             "readOnlyHint": False,
+            "openWorldHint": True,
             "destructiveHint": True,
             "idempotentHint": False,
         },
@@ -434,9 +450,11 @@ def register_bill_tools(mcp, config):
             return error_body(str(e))
 
     @mcp.tool(
+        title="Bill Delete",
         tags={"librenms", "bills", "admin"},
         annotations={
             "readOnlyHint": False,
+            "openWorldHint": True,
             "destructiveHint": True,
             "idempotentHint": True,
         },

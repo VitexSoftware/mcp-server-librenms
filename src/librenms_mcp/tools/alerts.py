@@ -71,9 +71,11 @@ def register_alert_tools(mcp, config):
     ##########################
 
     @mcp.tool(
+        title="Alerts Get",
         tags={"librenms", "alert", "read-only", "global-read"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -160,9 +162,11 @@ def register_alert_tools(mcp, config):
             return error_body(str(e))
 
     @mcp.tool(
+        title="Alert Get By ID",
         tags={"librenms", "alert", "read-only", "global-read"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -204,9 +208,11 @@ def register_alert_tools(mcp, config):
             return error_body(str(e))
 
     @mcp.tool(
+        title="Alert Acknowledge",
         tags={"librenms", "alert", "admin"},
         annotations={
             "readOnlyHint": False,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -259,9 +265,11 @@ def register_alert_tools(mcp, config):
             return error_body(str(e))
 
     @mcp.tool(
+        title="Alert Unmute",
         tags={"librenms", "alert", "admin"},
         annotations={
             "readOnlyHint": False,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -297,9 +305,11 @@ def register_alert_tools(mcp, config):
     ##########################
 
     @mcp.tool(
+        title="Alert Rules List",
         tags={"librenms", "alert-rules", "read-only", "global-read"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -341,9 +351,11 @@ def register_alert_tools(mcp, config):
             return error_body(str(e))
 
     @mcp.tool(
+        title="Alert Rule Get",
         tags={"librenms", "alert-rules", "read-only", "global-read"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -376,9 +388,11 @@ def register_alert_tools(mcp, config):
             return error_body(str(e))
 
     @mcp.tool(
+        title="Alert Rule Add",
         tags={"librenms", "alert-rules", "admin"},
         annotations={
             "readOnlyHint": False,
+            "openWorldHint": True,
             "destructiveHint": True,
             "idempotentHint": False,
         },
@@ -431,9 +445,11 @@ Example:
             return error_body(str(e))
 
     @mcp.tool(
+        title="Alert Rule Edit",
         tags={"librenms", "alert-rules", "admin"},
         annotations={
             "readOnlyHint": False,
+            "openWorldHint": True,
             "destructiveHint": True,
             "idempotentHint": True,
         },
@@ -483,9 +499,11 @@ Example:
             return error_body(str(e))
 
     @mcp.tool(
+        title="Alert Rule Delete",
         tags={"librenms", "alert-rules", "admin"},
         annotations={
             "readOnlyHint": False,
+            "openWorldHint": True,
             "destructiveHint": True,
             "idempotentHint": True,
         },
@@ -518,9 +536,11 @@ Example:
     ##########################
 
     @mcp.tool(
+        title="Alert Templates List",
         tags={"librenms", "alert-templates", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -562,9 +582,11 @@ Example:
             return error_body(str(e))
 
     @mcp.tool(
+        title="Alert Template Get",
         tags={"librenms", "alert-templates", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -597,9 +619,11 @@ Example:
             return error_body(str(e))
 
     @mcp.tool(
+        title="Alert Template Create",
         tags={"librenms", "alert-templates"},
         annotations={
             "readOnlyHint": False,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": False,
         },
@@ -650,9 +674,11 @@ Example:
             return error_body(str(e))
 
     @mcp.tool(
+        title="Alert Template Edit",
         tags={"librenms", "alert-templates"},
         annotations={
             "readOnlyHint": False,
+            "openWorldHint": True,
             "destructiveHint": True,
             "idempotentHint": True,
         },

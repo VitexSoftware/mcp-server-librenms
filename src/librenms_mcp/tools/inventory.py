@@ -21,9 +21,11 @@ def register_inventory_tools(mcp, config):
     ##########################
 
     @mcp.tool(
+        title="Inventory Device",
         tags={"librenms", "inventory", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -101,9 +103,11 @@ def register_inventory_tools(mcp, config):
             return error_body(str(e))
 
     @mcp.tool(
+        title="Inventory Device Flat",
         tags={"librenms", "inventory", "read-only"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },

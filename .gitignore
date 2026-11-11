@@ -237,3 +237,11 @@ cache/
 
 .mcpregistry_*
 .mcp.json
+.pybuild/
+debian/.debhelper/
+debian/debhelper-build-stamp
+debian/files
+debian/*.substvars
+debian/*.debhelper.log
+debian/mcp-server-librenms/
+debian/mcprack-mcp-server-librenms/

@@ -1,0 +1,2 @@
+debian/io.github.vitexus.mcp_server_librenms.metainfo.xml usr/share/metainfo/
+debian/server.json usr/share/mcp-server-librenms/

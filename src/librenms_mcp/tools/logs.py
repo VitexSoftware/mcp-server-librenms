@@ -105,9 +105,11 @@ def register_logs_tools(mcp, config):
     ##########################
 
     @mcp.tool(
+        title="Logs Eventlog",
         tags={"librenms", "logs", "read-only", "global-read"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -153,9 +155,11 @@ def register_logs_tools(mcp, config):
             return error_body(str(e))
 
     @mcp.tool(
+        title="Logs Syslog",
         tags={"librenms", "logs", "read-only", "global-read"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -201,9 +205,11 @@ def register_logs_tools(mcp, config):
             return error_body(str(e))
 
     @mcp.tool(
+        title="Logs Alertlog",
         tags={"librenms", "logs", "read-only", "global-read"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -249,9 +255,11 @@ def register_logs_tools(mcp, config):
             return error_body(str(e))
 
     @mcp.tool(
+        title="Logs Authlog",
         tags={"librenms", "logs", "read-only", "global-read"},
         annotations={
             "readOnlyHint": True,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
         },
@@ -297,9 +305,11 @@ def register_logs_tools(mcp, config):
             return error_body(str(e))
 
     @mcp.tool(
+        title="Logs Syslogsink",
         tags={"librenms", "logs", "admin"},
         annotations={
             "readOnlyHint": False,
+            "openWorldHint": True,
             "destructiveHint": False,
             "idempotentHint": False,
         },
