@@ -1,0 +1,9 @@
+#!/bin/sh
+set -e
+mcp-server-librenms --version
+cd "${AUTOPKGTEST_TMP:-/tmp}"
+SRC="${AUTOPKGTEST_ARTIFACTS:-$OLDPWD}"
+mkdir -p tests
+cp "$SRC/tests/test_standards.py" tests/ 2>/dev/null || cp "$OLDPWD/tests/test_standards.py" tests/
+export LIBRENMS_URL=https://librenms.example.invalid LIBRENMS_TOKEN=0000000000000000000000000000000000
+python3 -m pytest -q -p no:cacheprovider tests/test_standards.py
